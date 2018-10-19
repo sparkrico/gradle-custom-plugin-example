@@ -1,0 +1,24 @@
+apply plugin: 'groovy'
+apply plugin: 'maven-publish'
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+
+publishing {
+    repositories {
+        maven {
+            url = "../repo"
+        }
+    }
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.sparkrico'
+            artifactId = 'CustomPlugin'
+            version = '1.0'
+
+            from components.java
+        }
+    }
+}
