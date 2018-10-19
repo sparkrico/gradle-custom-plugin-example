@@ -1,11 +1,11 @@
 
 
-####Build Plugin
+#### Build Plugin
 
     cd custom-plugin
     gradle publish
     
-####Config
+#### Config
 root build.gradle
 
     repositories {
